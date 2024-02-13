@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: #fff;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    background-color: #000;
+    height: 85%;
+    width: 100%;
+    padding: 3%;
+    display: flex;
+}
+
+#left{
+    width: 45%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 30px 0 0 30px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: top;
+    transition: all ease 0.8s;
+}
+
+/* #poster{
+    height: 100%;
+    width: 100%;
+} */
+
+#right{
+    width: 55%;
+    height: 100%;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 0 30px 30px 0;
+    overflow: hidden;
+}
+
+#right h2{
+    font-size: 30px;
+}
+
+#list{
+    height: 85%;
+    margin-top: 2vw;
+    /* background-color: #555; */
+    overflow: hidden;
+    transition: hover ease 0.7s;
+}
+
+#list:hover{
+    overflow-y: auto;
+}
+
+#list::-webkit-scrollbar{
+    width: 5px;
+}
+
+#list::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    border-radius: 10px;
+  }
+
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5vw 1vw;
+  border-top: 1px solid #5a5a5a;
+} 
+
+/* .card:nth-last-child(1){
+    border-bottom: 1px solid #5a5a5a;
+} */
+
+.card:hover{
+    background-color: #101010;
+    scale: 1.02;
+}
+
+.inner-card{
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.card img{
+    height: 55px;
+    width: 55px;
+    border-radius: 8px;
+}
+
+.card img:hover .card img{
+    scale: 1.1;
+}
+
+.card h3{
+    font-size: 1.5vw;
+    margin: 10px 30px;
+    font-weight: 600;
+}
+
+.card h6{
+    font-size: 1vw;
+    font-weight: 500;
+    color: #d1c8c8;
+    margin-right: 2vw;
+}
+
+#player{
+    border-top: 1px solid #5a5a5a;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+#player h3{
+    font-size: 30px;
+    margin-right: 2vw;
+}
+
+@media (max-width: 600px){
+    #main{
+        flex-direction: column;
+        padding: 5% 5% 0 5%;
+    }
+
+    #left{
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: 5vw;
+    }
+
+    #right{
+        width: 100%;
+        border-radius: 30px 30px 0 0;
+}
+
+    .card{
+        padding: 4vw;
+    }
+
+    .card h3{
+        font-size: 3.5vw;
+    }
+
+    .card h6{
+        font-size: 2.5vw;
+    }
+    
+}
